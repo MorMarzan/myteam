@@ -4,14 +4,16 @@ import chartIcon from '../../public/images/icon-chart.svg'
 import kadyAvatar from '../../public/images/avatar-kady.jpg'
 import aiyshaAvatar from '../../public/images/avatar-aiysha.jpg'
 import arthurAvatar from '../../public/images/avatar-arthur.jpg'
+import decoImg from '../../public/images/bg-pattern-home-2.svg'
 
 export function HomePage() {
     return (
         <div className="main-layout full home-page">
             <section className="main-layout full hero">
                 <div className="section-container">
-                    <h2>Find the best <mark>talent</mark></h2>
+                    <h2>Find the <br></br>best <mark>talent</mark></h2>
                     <p>Finding the right people and building high performing teams can be hard. Most companies aren’t tapping into the abundance of global talent. We’re about to change that.</p>
+                    <img className='special-bg' src={decoImg}></img>
                 </div>
             </section>
 

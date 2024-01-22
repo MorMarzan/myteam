@@ -2,6 +2,29 @@
 
     .hero {
         background-color: $clrPrimary1;
+
+        .section-container {
+            display: grid;
+            grid-auto-flow: column;
+            align-items: end;
+            column-gap: 200px;
+            row-gap: 155px;
+
+            h2 {
+                font-size: rem(100px);
+            }
+
+            p {
+                grid-row: 1;
+            }
+
+            .special-bg {
+                grid-row: 2;
+                grid-column: 2;
+                padding-inline-start: 87px;
+            }
+        }
+
     }
 
     .highlights {
