@@ -44,20 +44,22 @@ export function HomePage() {
                 <div className="section-container">
 
                     <h3>Delivering real results for top companies. Some of our <mark>success stories.</mark></h3>
-                    <div>
-                        <p> “The team perfectly fit the specialized skill set required. They focused on the most essential features helping us launch the platform eight months faster than planned.”</p>
-                        <h4 className='name'>Kady Baker</h4>
-                        <img src={kadyAvatar} alt="kady avatar" style={{ width: '50px' }} />
-                    </div>
-                    <div>
-                        <p> “We needed to automate our entire onboarding process. The team came in and built out the whole journey. Since going live, user retention has gone through the roof!”</p>
-                        <h4 className='name'>Aiysha Reese</h4>
-                        <img src={aiyshaAvatar} alt="kady avatar" style={{ width: '50px' }} />
-                    </div>
-                    <div>
-                        <p>“Amazing. Our team helped us build an app that delivered a new experience for hiring a physio. The launch was an instant success with 100k downloads in the first month.”</p>
-                        <h4 className='name'>Arthur Clarke</h4>
-                        <img src={arthurAvatar} alt="kady avatar" style={{ width: '50px' }} />
+                    <div className='content'>
+                        <div className='testimony'>
+                            <p> “The team perfectly fit the specialized skill set required. They focused on the most essential features helping us launch the platform eight months faster than planned.”</p>
+                            <h4 className='name'>Kady Baker</h4>
+                            <img src={kadyAvatar} alt="kady avatar" />
+                        </div>
+                        <div className='testimony'>
+                            <p> “We needed to automate our entire onboarding process. The team came in and built out the whole journey. Since going live, user retention has gone through the roof!”</p>
+                            <h4 className='name'>Aiysha Reese</h4>
+                            <img src={aiyshaAvatar} alt="kady avatar" />
+                        </div>
+                        <div className='testimony'>
+                            <p>“Amazing. Our team helped us build an app that delivered a new experience for hiring a physio. The launch was an instant success with 100k downloads in the first month.”</p>
+                            <h4 className='name'>Arthur Clarke</h4>
+                            <img src={arthurAvatar} alt="kady avatar" />
+                        </div>
                     </div>
                 </div>
             </section>

@@ -48,6 +48,34 @@
 
     .testimonials {
         background-color: $clrSecondaryBase;
+        text-align: center;
+        padding-block: 140px;
+
+        h3 {
+            font-size: rem(48px);
+            margin-block-end: 85px;
+        }
+
+        .content {
+            display: grid;
+            grid-auto-flow: column;
+            gap: 30px;
+
+            .testimony {
+                display: grid;
+                justify-items: center;
+                gap: 24px;
+
+                img {
+                    margin-block-start: 28px;
+                    border-radius: 50%;
+                    height: 62px;
+                    width: 62px;
+                    border: 2px solid $clrSecondary3;
+
+                }
+            }
+        }
     }
 
     .call-to-action {
