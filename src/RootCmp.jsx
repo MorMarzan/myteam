@@ -12,7 +12,7 @@ export function App() {
 
   return (
     <Router>
-      <section className="main-layout app">
+      <section className="main-layout full app">
         <AppHeader />
         <main className="main-layout full app">
           <Routes>
