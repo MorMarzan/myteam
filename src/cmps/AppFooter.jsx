@@ -8,7 +8,7 @@ import twitterIcon from '../../public/images/icon-twitter.svg'
 export function AppFooter() {
 
     return (
-        <footer className="app-footer full">
+        <footer className="main-layout full app-footer">
             <div>
                 <h1>myteam</h1>
                 <nav className="app-nav">
