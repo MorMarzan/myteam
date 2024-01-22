@@ -29,6 +29,21 @@
 
     .highlights {
         background-color: $clrSecondary-1;
+        padding-block: 140px;
+
+        .section-container {
+            display: grid;
+            grid-auto-flow: column;
+        }
+
+        h3 {
+            font-size: rem(48px);
+        }
+
+        .content {
+            display: grid;
+        }
+
     }
 
     .testimonials {

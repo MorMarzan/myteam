@@ -19,22 +19,23 @@ export function HomePage() {
 
             <section className="main-layout full highlights">
                 <div className="section-container">
-
                     <h3>Build & manage distributed teams like no one else.</h3>
-                    <div>
-                        <img src={personIcon} alt="person icon" style={{ width: '50px' }} />
-                        <h4 className='title'>Experienced Individuals</h4>
-                        <p>Our network is made up of highly experienced professionals who are passionate about what they do.</p>
-                    </div>
-                    <div>
-                        <img src={cogIcon} alt="cog icon" style={{ width: '50px' }} />
-                        <h4 className='title'>Easy to Implement</h4>
-                        <p>Our processes have been refined over years of implementation meaning our teams always deliver.</p>
-                    </div>
-                    <div>
-                        <img src={chartIcon} alt="chart icon" style={{ width: '50px' }} />
-                        <h4 className='title'>Enhanced Productivity</h4>
-                        <p>Our customized platform with in-built analytics helps you manage your distributed teams.</p>
+                    <div className='content'>
+                        <div>
+                            <img src={personIcon} alt="person icon" style={{ width: '50px' }} />
+                            <h4 className='title'>Experienced Individuals</h4>
+                            <p>Our network is made up of highly experienced professionals who are passionate about what they do.</p>
+                        </div>
+                        <div>
+                            <img src={cogIcon} alt="cog icon" style={{ width: '50px' }} />
+                            <h4 className='title'>Easy to Implement</h4>
+                            <p>Our processes have been refined over years of implementation meaning our teams always deliver.</p>
+                        </div>
+                        <div>
+                            <img src={chartIcon} alt="chart icon" style={{ width: '50px' }} />
+                            <h4 className='title'>Enhanced Productivity</h4>
+                            <p>Our customized platform with in-built analytics helps you manage your distributed teams.</p>
+                        </div>
                     </div>
                 </div>
             </section>
