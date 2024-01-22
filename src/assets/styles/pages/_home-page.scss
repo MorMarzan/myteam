@@ -80,5 +80,19 @@
 
     .call-to-action {
         background-color: $clrPrimary2;
+        padding-block: 76px;
+        color: $clrSecondary-1;
+
+        .section-container {
+            display: grid;
+            grid-auto-flow: column;
+            align-items: center;
+            justify-content: center;
+            gap: 260px
+        }
+
+        h3 {
+            font-size: rem(48px);
+        }
     }
 }
