@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom"
-import logo from '../../public/images/logo.svg'
+import logo from '/src/assets//images/logo.svg'
 
 
 export function AppHeader() {

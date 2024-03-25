@@ -1,10 +1,11 @@
-import personIcon from '../../public/images/icon-person.svg'
-import cogIcon from '../../public/images/icon-cog.svg'
-import chartIcon from '../../public/images/icon-chart.svg'
-import kadyAvatar from '../../public/images/avatar-kady.jpg'
-import aiyshaAvatar from '../../public/images/avatar-aiysha.jpg'
-import arthurAvatar from '../../public/images/avatar-arthur.jpg'
-import decoImg from '../../public/images/bg-pattern-home-2.svg'
+import personIcon from '/src/assets/images/icon-person.svg'
+import cogIcon from '/src/assets/images/icon-cog.svg'
+import chartIcon from '/src/assets/images/icon-chart.svg'
+import kadyAvatar from '/src/assets/images/avatar-kady.jpg'
+import aiyshaAvatar from '/src/assets/images/avatar-aiysha.jpg'
+import arthurAvatar from '/src/assets/images/avatar-arthur.jpg'
+import decoImg from '/src/assets/images/bg-pattern-home-2.svg'
+import { Highlight } from '../cmps/Highlight'
 
 export function HomePage() {
     return (
@@ -21,21 +22,24 @@ export function HomePage() {
                 <div className="section-container">
                     <h3>Build & manage distributed teams like no one else.</h3>
                     <div className='content'>
-                        <div>
-                            <img src={personIcon} alt="person icon" style={{ width: '50px' }} />
-                            <h4 className='title'>Experienced Individuals</h4>
-                            <p>Our network is made up of highly experienced professionals who are passionate about what they do.</p>
-                        </div>
-                        <div>
-                            <img src={cogIcon} alt="cog icon" style={{ width: '50px' }} />
-                            <h4 className='title'>Easy to Implement</h4>
-                            <p>Our processes have been refined over years of implementation meaning our teams always deliver.</p>
-                        </div>
-                        <div>
-                            <img src={chartIcon} alt="chart icon" style={{ width: '50px' }} />
-                            <h4 className='title'>Enhanced Productivity</h4>
-                            <p>Our customized platform with in-built analytics helps you manage your distributed teams.</p>
-                        </div>
+                        <Highlight
+                            src={personIcon}
+                            alt={'person'}
+                            title={'Experienced Individuals'}
+                            content={'Our network is made up of highly experienced professionals who are passionate about what they do.'}
+                        />
+                        <Highlight
+                            src={cogIcon}
+                            alt={'cog'}
+                            title={'Easy to Implement'}
+                            content={'Our processes have been refined over years of implementation meaning our teams always deliver.'}
+                        />
+                        <Highlight
+                            src={chartIcon}
+                            alt={'chart'}
+                            title={'Enhanced Productivity'}
+                            content={'Our customized platform with in-built analytics helps you manage your distributed teams.'}
+                        />
                     </div>
                 </div>
             </section>
