@@ -47,7 +47,6 @@ export function HomePage() {
 
             <section className='main-layout full testimonials'>
                 <div className="section-container">
-
                     <h3>Delivering real results for top companies. Some of our <mark>success stories.</mark></h3>
                     <div className='content'>
                         <Testimony
@@ -71,7 +70,6 @@ export function HomePage() {
 
             <section className='main-layout full call-to-action'>
                 <div className="section-container">
-
                     <h3>Ready to get started?</h3>
                     <button className='btn'>contact us</button>
                 </div>
