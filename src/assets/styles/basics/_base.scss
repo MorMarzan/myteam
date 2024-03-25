@@ -58,3 +58,15 @@ a:hover {
     // text-decoration: underline;
     color: $clrPrimary2
 }
+
+.btn {
+    border: 2px $clrPrimary3 solid;
+    border-radius: $border-radius;
+    padding: 10px 30px;
+    transition: 1ms;
+
+    &:hover {
+        background-color: $clrPrimary3;
+        color: $clrSecondary-2;
+    }
+}
