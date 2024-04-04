@@ -1,5 +1,8 @@
 
-export function Highlight({ src, alt, title, content }) {
+export function Highlight({ highlight }) {
+
+    const { src, alt, title, content } = highlight
+
     return (
         <div className='highlight'>
             <img src={src} alt={`${alt} icon`} style={{ width: '50px' }} />

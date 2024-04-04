@@ -1,14 +1,54 @@
-import personIcon from '/src/assets/images/icon-person.svg'
-import cogIcon from '/src/assets/images/icon-cog.svg'
-import chartIcon from '/src/assets/images/icon-chart.svg'
-import kadyAvatar from '/src/assets/images/avatar-kady.jpg'
-import aiyshaAvatar from '/src/assets/images/avatar-aiysha.jpg'
-import arthurAvatar from '/src/assets/images/avatar-arthur.jpg'
-import decoImg from '/src/assets/images/bg-pattern-home-2.svg'
+import decoImg from '/images/bg-pattern-home-2.svg'
 import { Highlight } from '../cmps/Highlight'
 import { Testimony } from '../cmps/Testimony'
 
 export function HomePage() {
+
+    const highlights = [
+        {
+            src: "/images/icon-person.svg",
+            alt: "person",
+            title: "Experienced Individuals",
+            content: "Our network is made up of highly experienced professionals who are passionate about what they do.",
+            id: 1
+        },
+        {
+            src: "images/icon-cog.svg",
+            alt: "cog",
+            title: "Easy to Implement",
+            content: "Our processes have been refined over years of implementation meaning our teams always deliver.",
+            id: 2
+        },
+        {
+            src: "/images/icon-chart.svg",
+            alt: "chart",
+            title: "Enhanced Productivity",
+            content: "Our customized platform with in-built analytics helps you manage your distributed teams.",
+            id: 3
+        }
+    ]
+
+    const testimonies = [
+        {
+            content: "“The team perfectly fit the specialized skill set required. They focused on the most essential features helping us launch the platform eight months faster than planned.”",
+            name: "Kady Baker",
+            src: "/images/avatar-kady.jpg",
+            id: 1
+        },
+        {
+            content: "“We needed to automate our entire onboarding process. The team came in and built out the whole journey. Since going live, user retention has gone through the roof!”",
+            name: "Aiysha Reese",
+            src: "/images/avatar-aiysha.jpg",
+            id: 2
+        },
+        {
+            content: "“Amazing. Our team helped us build an app that delivered a new experience for hiring a physio. The launch was an instant success with 100k downloads in the first month.”",
+            name: "Arthur Clarke",
+            src: "/images/avatar-arthur.jpg",
+            id: 3
+        }
+    ]
+
     return (
         <div className="main-layout full home-page">
             <section className="main-layout full hero">
@@ -23,24 +63,7 @@ export function HomePage() {
                 <div className="section-container">
                     <h3>Build & manage distributed teams like no one else.</h3>
                     <div className='content'>
-                        <Highlight
-                            src={personIcon}
-                            alt={'person'}
-                            title={'Experienced Individuals'}
-                            content={'Our network is made up of highly experienced professionals who are passionate about what they do.'}
-                        />
-                        <Highlight
-                            src={cogIcon}
-                            alt={'cog'}
-                            title={'Easy to Implement'}
-                            content={'Our processes have been refined over years of implementation meaning our teams always deliver.'}
-                        />
-                        <Highlight
-                            src={chartIcon}
-                            alt={'chart'}
-                            title={'Enhanced Productivity'}
-                            content={'Our customized platform with in-built analytics helps you manage your distributed teams.'}
-                        />
+                        {highlights.map(highlight => <Highlight key={highlight.id} highlight={highlight} />)}
                     </div>
                 </div>
             </section>
@@ -49,21 +72,7 @@ export function HomePage() {
                 <div className="section-container">
                     <h3>Delivering real results for top companies. Some of our <mark>success stories.</mark></h3>
                     <div className='content'>
-                        <Testimony
-                            content={'“The team perfectly fit the specialized skill set required. They focused on the most essential features helping us launch the platform eight months faster than planned.”'}
-                            name={'Kady Baker'}
-                            src={kadyAvatar}
-                        />
-                        <Testimony
-                            content={'“We needed to automate our entire onboarding process. The team came in and built out the whole journey. Since going live, user retention has gone through the roof!”'}
-                            name={'Aiysha Reese'}
-                            src={aiyshaAvatar}
-                        />
-                        <Testimony
-                            content={'“Amazing. Our team helped us build an app that delivered a new experience for hiring a physio. The launch was an instant success with 100k downloads in the first month.”'}
-                            name={'Arthur Clarke'}
-                            src={arthurAvatar}
-                        />
+                        {testimonies.map(testimony => <Testimony key={testimony.id} testimony={testimony} />)}
                     </div>
                 </div>
             </section>

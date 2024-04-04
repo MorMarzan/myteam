@@ -1,5 +1,6 @@
 
-export function Testimony({ content, name, src }) {
+export function Testimony({ testimony }) {
+    const { src, name, content } = testimony
     return (
         <div className="testimony">
             <p>{content}</p>
