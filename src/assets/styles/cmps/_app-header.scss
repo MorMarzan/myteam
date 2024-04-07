@@ -3,11 +3,17 @@
     padding-block-start: 73px;
     padding-block-end: 130px;
 
-    img {
+    .logo {
         max-width: 160px;
     }
 
+    .hamburger {
+        margin-inline-start: auto;
+        max-width: 20px;
+    }
+
     nav {
+        // display: none;
         width: 100%;
 
         a:first-child {

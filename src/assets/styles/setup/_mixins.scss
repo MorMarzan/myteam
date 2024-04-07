@@ -1,6 +1,6 @@
 /* Breakpoint mixins */
 
-//mobilr only
+//mobile only
 @mixin for-mobile-layout {
     @media (max-width: calc($mobile-breakpoint + 40px)) {
         @content;
@@ -61,4 +61,55 @@
             @content;
         }
     }
+}
+
+@mixin btn ($type: primary-light, $disabled: false) {
+    font-size: em(18px, 15px);
+    line-height: lh(28px, 18px);
+    padding: em(10px, 18px) em(30px, 18px);
+    border: 2px $clrPrimary3 solid;
+    border-radius: $border-radius;
+
+
+    transition: background-color 0.2s;
+    cursor: pointer;
+
+    @if $type ==secondary-light {
+        background-color: $clrPrimary3;
+        color: $clrSecondary-2;
+        border-color: $clrPrimary1;
+
+        &:hover {
+            background-color: $clrSecondary2;
+            color: $clrSecondary-2;
+        }
+    }
+
+    @else if $type ==darkish {
+        background-color: $clrPrimary3;
+        color: $clrSecondary-2;
+        border-color: $clrPrimary1;
+
+        &:hover {
+            background-color: $clrSecondary-1;
+            color: $clrPrimary3;
+        }
+    }
+
+    @else {
+        &:hover {
+            background-color: $clrPrimary3;
+            color: $clrSecondary-2;
+        }
+    }
+
+
+    @if $disabled ==true {
+        opacity: 0.25;
+        pointer-events: none;
+    }
+
+
+
+
 }

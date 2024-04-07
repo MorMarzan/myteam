@@ -7,17 +7,14 @@
 }
 
 html {
-    // font-family: montserrat;
     font-family: Livvic-SemiBold, sans-serif;
-    line-height: 1.6;
+    font-size: 15px;
+    line-height: lh(25px, 15px);
     color: $clrPrimary3;
 
 }
 
 body {
-    font-size: rem(18px);
-    margin: 0;
-    // max-width: 1024px;
     margin: 0;
 }
 
@@ -28,9 +25,31 @@ h4,
 h5,
 h6 {
     font-family: Livvic-Bold, sans-serif;
-    // margin: 0 0 0.6em;
-    margin: 0;
     line-height: 1;
+    margin: 0;
+}
+
+h2 {
+    font-size: em(100px, 15px);
+}
+
+h3 {
+    font-size: em(64px, 15px);
+    line-height: lh(56px, 64px);
+}
+
+h4 {
+    font-size: em(48px, 15px);
+}
+
+h5,
+h6 {
+    font-size: em(18px, 15px);
+    line-height: lh(28px, 18px);
+}
+
+h6 {
+    font-family: Livvic-SemiBold, sans-serif;
 }
 
 
@@ -50,23 +69,15 @@ p {
 }
 
 a {
+    font-size: em(18px, 15px);
     text-decoration: none;
     color: $clrPrimary3
 }
 
 a:hover {
-    // text-decoration: underline;
     color: $clrPrimary2
 }
 
 .btn {
-    border: 2px $clrPrimary3 solid;
-    border-radius: $border-radius;
-    padding: 10px 30px;
-    transition: 1ms;
-
-    &:hover {
-        background-color: $clrPrimary3;
-        color: $clrSecondary-2;
-    }
+    @include btn();
 }

@@ -10,8 +10,8 @@ export function AppHeader() {
         <header className="main-layout full app-header ">
 
             <div className="section-container flex align-center">
-                <img src={logo} alt="myteam logo" className="hamburger"></img>
-                <img src={hamburger} alt="hamburger"></img>
+                <img src={logo} alt="myteam logo" className="logo"></img>
+                {/* <img src={hamburger} alt="hamburger" className="hamburger"></img> */}
                 <nav className="flex align-center app-nav">
                     <NavLink to="/" >Home</NavLink>
                     <NavLink to="/about" >About</NavLink>

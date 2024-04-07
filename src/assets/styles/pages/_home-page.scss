@@ -10,10 +10,6 @@
             column-gap: 200px;
             row-gap: 155px;
 
-            h2 {
-                font-size: rem(100px);
-            }
-
             p {
                 grid-row: 1;
             }
@@ -37,7 +33,7 @@
         }
 
         h3 {
-            font-size: rem(48px);
+            // font-size: rem(48px);
         }
 
         .content {
