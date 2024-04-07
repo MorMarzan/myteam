@@ -1,7 +1,14 @@
 .app-header {
     background-color: $clrPrimary1;
-    padding-block-start: 73px;
-    padding-block-end: 130px;
+    padding-block: 73px;
+    // padding-block-end: 130px;
+    position: sticky;
+    top: 0;
+    transition: box-shadow 0.3s ease-in-out;
+
+    &.scrolled {
+        box-shadow: 0 3px 5px #c4fffe38;
+    }
 
     .logo {
         max-width: 160px;
