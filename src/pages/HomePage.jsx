@@ -1,6 +1,7 @@
 import { HighlightList } from '../cmps/HighlightList'
 import { TestimonyList } from '../cmps/TestimonyList'
-import decoImg from '/images/bg-pattern-home-2.svg'
+import decoImgBottom from '/images/bg-pattern-home-2.svg'
+import decoImgLeft from '/images/bg-pattern-home-1.svg'
 
 export function HomePage() {
 
@@ -52,10 +53,14 @@ export function HomePage() {
     return (
         <div className="main-layout full home-page">
             <section className="main-layout full hero">
+                {/* <img src={decoImgLeft} className='deco-img-left'></img> */}
                 <div className="section-container">
-                    <h2>Find the <br></br>best <mark>talent</mark></h2>
-                    <p>Finding the right people and building high performing teams can be hard. Most companies aren’t tapping into the abundance of global talent. We’re about to change that.</p>
-                    <img className='special-bg' src={decoImg}></img>
+                    <h2 className='title'>Find the <br></br>best <mark>talent</mark></h2>
+                    <div className='content'>
+                        <div className='deco-line'></div>
+                        <h6>Finding the right people and building high performing teams can be hard. Most companies aren’t tapping into the abundance of global talent. We’re about to change that.</h6>
+                    </div>
+                    <img className='special-bg' src={decoImgBottom}></img>
                 </div>
             </section>
 

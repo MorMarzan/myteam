@@ -1,5 +1,6 @@
 .home-page {
 
+
     .hero {
         background-color: $clrPrimary1;
 
@@ -7,12 +8,24 @@
             display: grid;
             grid-auto-flow: column;
             align-items: end;
-            column-gap: 200px;
+            justify-content: space-between;
             row-gap: 155px;
             padding-block-start: 57px;
 
-            p {
+            .content {
                 grid-row: 1;
+                position: relative;
+                display: grid;
+                align-content: space-between;
+                height: 100%;
+                max-width: 445px;
+
+                .deco-line {
+                    height: 4px;
+                    width: 50px;
+                    background-color: $clrSecondary2;
+                }
+
             }
 
             .special-bg {
@@ -20,6 +33,21 @@
                 grid-column: 2;
                 padding-inline-start: 87px;
             }
+
+            .title {
+                position: relative;
+            }
+
+            .title::before {
+                content: url('/images/bg-pattern-home-1.svg');
+                width: 200px;
+                position: absolute;
+                right: 100%;
+                top: 50%;
+                transform: translate(-40%, -50%);
+
+            }
+
         }
 
     }
