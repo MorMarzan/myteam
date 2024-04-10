@@ -1,6 +1,6 @@
-import decoImg from '/images/bg-pattern-home-2.svg'
-import { Testimony } from '../cmps/Testimony'
 import { HighlightList } from '../cmps/HighlightList'
+import { TestimonyList } from '../cmps/TestimonyList'
+import decoImg from '/images/bg-pattern-home-2.svg'
 
 export function HomePage() {
 
@@ -61,14 +61,7 @@ export function HomePage() {
 
             <HighlightList highlights={highlights} />
 
-            <section className='main-layout full testimonials'>
-                <div className="section-container">
-                    <h3>Delivering real results for top companies. Some of our <mark>success stories.</mark></h3>
-                    <div className='content'>
-                        {testimonies.map(testimony => <Testimony key={testimony.id} testimony={testimony} />)}
-                    </div>
-                </div>
-            </section>
+            <TestimonyList testimonies={testimonies} />
 
             <section className='main-layout full call-to-action'>
                 <div className="section-container">

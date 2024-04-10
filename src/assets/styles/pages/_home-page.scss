@@ -43,7 +43,7 @@
 
     }
 
-    .testimonials {
+    .testimony-list {
         background-color: $clrSecondaryBase;
         text-align: center;
         padding-block: 140px;
@@ -58,7 +58,7 @@
             grid-auto-flow: column;
             gap: 30px;
 
-            .testimony {
+            .testimony-preview {
                 display: grid;
                 justify-items: center;
                 gap: 24px;
