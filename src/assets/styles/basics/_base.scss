@@ -81,3 +81,8 @@ a:hover {
 .btn {
     @include btn();
 }
+
+mark {
+    background-color: unset;
+    color: $clrPrimary2;
+}

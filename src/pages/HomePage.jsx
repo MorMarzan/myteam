@@ -1,6 +1,6 @@
 import decoImg from '/images/bg-pattern-home-2.svg'
-import { Highlight } from '../cmps/Highlight'
 import { Testimony } from '../cmps/Testimony'
+import { HighlightList } from '../cmps/HighlightList'
 
 export function HomePage() {
 
@@ -59,14 +59,7 @@ export function HomePage() {
                 </div>
             </section>
 
-            <section className="main-layout full highlights">
-                <div className="section-container">
-                    <h3>Build & manage distributed teams like no one else.</h3>
-                    <div className='content'>
-                        {highlights.map(highlight => <Highlight key={highlight.id} highlight={highlight} />)}
-                    </div>
-                </div>
-            </section>
+            <HighlightList highlights={highlights} />
 
             <section className='main-layout full testimonials'>
                 <div className="section-container">
