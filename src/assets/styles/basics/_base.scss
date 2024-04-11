@@ -32,12 +32,12 @@ h6 {
 h2 {
     font-size: em(40px, 15px);
 
-    @include for-narrow-layout {
+    @include for-normal-layout {
         font-size: em(64px, 15px);
         line-height: lh(56px, 64px);
     }
 
-    @include for-normal-layout {
+    @include for-wide-layout {
         font-size: em(100px, 15px);
         line-height: 1;
     }
@@ -57,7 +57,7 @@ h6 {
     font-size: em(15px, 15px);
     line-height: lh(28px, 15px);
 
-    @include for-normal-layout {
+    @include for-wide-layout {
         font-size: em(18px, 15px);
         line-height: lh(28px, 18px);
     }
@@ -85,6 +85,7 @@ p {
 
 a {
     font-size: em(18px, 15px);
+    line-height: lh(28px, 18px);
     text-decoration: none;
     color: $clrPrimary3
 }

@@ -4,7 +4,6 @@
     .hero {
         background-color: $clrPrimary1;
 
-
         .section-container {
             display: grid;
             padding-block-start: 57px;
@@ -14,8 +13,6 @@
             justify-content: center;
             justify-items: center;
             text-align: center;
-
-            @include for-narrow-layout {}
 
             @include for-wide-layout {
                 grid-auto-flow: column;
@@ -32,7 +29,7 @@
                 display: grid;
 
                 @include for-narrow-layout {
-                    max-width: 445px;
+                    max-width: 457px;
                 }
 
                 @include for-wide-layout {
@@ -97,10 +94,6 @@
         .section-container {
             display: grid;
             grid-auto-flow: column;
-        }
-
-        h3 {
-            // font-size: rem(48px);
         }
 
         .content {

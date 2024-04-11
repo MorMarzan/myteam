@@ -99,6 +99,11 @@
             }
         }
 
+        @include for-normal-layout {
+            a:first-of-type {
+                margin-inline-start: 50px;
+            }
+        }
 
 
     }
