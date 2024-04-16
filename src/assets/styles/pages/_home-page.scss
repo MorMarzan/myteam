@@ -89,15 +89,113 @@
 
     .highlight-list {
         background-color: $clrSecondary-1;
-        padding-block: 140px;
+        padding-block: 100px;
+        position: relative;
+        overflow: hidden;
+
+        .deco-img {
+            max-width: 200px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            translate: 50%;
+
+            @include for-wide-layout {
+                top: unset;
+                bottom: 0;
+            }
+        }
+
+        @include for-normal-layout {
+            padding-block: 140px;
+        }
+
+        @include for-wide-layout {
+            padding-block: 200px;
+
+        }
 
         .section-container {
             display: grid;
-            grid-auto-flow: column;
+
+            @include for-wide-layout {
+                grid-auto-flow: column;
+                gap: 125px;
+            }
+        }
+
+        .list-title {
+            position: relative;
+            padding-block-end: 56px;
+            max-width: 240px;
+
+            @include for-normal-layout {
+                max-width: 445px;
+            }
+
+            @include for-wide-layout {}
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -32px;
+                height: 4px;
+                width: 50px;
+                background-color: $clrPrimary2;
+
+                @include for-wide-layout {
+                    top: -54px
+                }
+            }
         }
 
         .content {
             display: grid;
+            gap: 48px;
+
+            @include for-normal-layout {
+                gap: 32px;
+            }
+
+        }
+
+        .highlight-preview {
+            display: grid;
+            justify-items: center;
+
+            img {
+                max-width: 72px;
+            }
+
+            @include for-normal-layout {
+                grid-template-columns: auto 1fr;
+                gap: 22px;
+                align-items: center;
+            }
+
+            @include for-wide-layout {
+                justify-items: start;
+            }
+
+            &:last-child p {
+                @include for-wide-layout {
+                    max-width: 365px;
+                }
+            }
+
+
+            .preveiw-content {
+                text-align: center;
+
+                @include for-normal-layout {
+                    text-align: unset;
+                }
+
+                .title {
+                    color: $clrPrimary2;
+                    margin-block-start: 16px;
+                }
+            }
         }
 
     }
@@ -107,10 +205,22 @@
         text-align: center;
         padding-block: 140px;
 
-        h3 {
-            font-size: rem(48px);
-            margin-block-end: 85px;
+        .section-container {
+            display: grid;
+            justify-items: center;
         }
+
+
+        .title {
+            margin-block-end: 50px;
+            max-width: 930px;
+
+            mark {
+                color: $clrSecondary2;
+            }
+
+        }
+
 
         .content {
             display: grid;

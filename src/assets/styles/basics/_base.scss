@@ -49,7 +49,11 @@ h3 {
 }
 
 h4 {
-    font-size: em(48px, 15px);
+    font-size: em(32px, 15px);
+
+    @include for-wide-layout {
+        font-size: em(48px, 15px);
+    }
 }
 
 h5,

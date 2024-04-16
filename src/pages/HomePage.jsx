@@ -1,7 +1,7 @@
 import { HighlightList } from '../cmps/HighlightList'
 import { TestimonyList } from '../cmps/TestimonyList'
 import decoImgBottom from '/images/bg-pattern-home-2.svg'
-import decoImgLeft from '/images/bg-pattern-home-1.svg'
+// import decoImgLeft from '/images/bg-pattern-home-1.svg'
 
 export function HomePage() {
 
