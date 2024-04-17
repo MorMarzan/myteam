@@ -4,7 +4,7 @@ export function TestimonyPreview({ testimony }) {
     return (
         <div className="testimony-preview">
             <p>{content}</p>
-            <h4 className='name'>{name}</h4>
+            <h5 className='name'>{name}</h5>
             <img src={src} alt={`${name} avatar`} />
         </div>
     )

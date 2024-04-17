@@ -204,6 +204,23 @@
         background-color: $clrSecondaryBase;
         text-align: center;
         padding-block: 140px;
+        position: relative;
+
+        .deco-img {
+            position: absolute;
+            max-width: 147px;
+            grid-column: 1;
+
+            &.bottom {
+                bottom: 0;
+                right: 0;
+            }
+
+            &.top {
+                top: 0;
+                left: 0;
+            }
+        }
 
         .section-container {
             display: grid;
@@ -212,7 +229,7 @@
 
 
         .title {
-            margin-block-end: 50px;
+            margin-block-end: 85px;
             max-width: 930px;
 
             mark {
@@ -224,16 +241,46 @@
 
         .content {
             display: grid;
-            grid-auto-flow: column;
-            gap: 30px;
+            gap: 85px;
+
+            @include for-wide-layout {
+                grid-auto-flow: column;
+                gap: 30px;
+            }
 
             .testimony-preview {
                 display: grid;
                 justify-items: center;
-                gap: 24px;
+                // gap: 24px;
+                position: relative;
+
+                &::before {
+                    content: url('/images/icon-quotes.svg');
+                    width: 67px;
+                    position: absolute;
+                    right: 50%;
+                    top: 0;
+                    transform: translate(50%, -50%);
+                    opacity: 0.5;
+
+                }
+
+                .name {
+                    font-size: em(18px, 15px);
+                    color: $clrSecondary2;
+                    padding-block: 16px 36px;
+
+                    @include for-wide-layout {
+                        padding-block: 24px 52px;
+                    }
+                }
+
+                p {
+                    z-index: 5;
+                }
 
                 img {
-                    margin-block-start: 28px;
+                    // margin-block-start: 28px;
                     border-radius: 50%;
                     height: 62px;
                     width: 62px;
