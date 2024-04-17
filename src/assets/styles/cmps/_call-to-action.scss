@@ -1,0 +1,55 @@
+.call-to-action {
+    background-color: $clrPrimary2;
+    color: $clrSecondary-1;
+    position: relative;
+    overflow: hidden;
+    padding-block: 84px;
+
+    @include for-wide-layout {
+        padding-block: 76px;
+
+    }
+
+    .section-container {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        gap: 24px;
+        text-align: center;
+
+        @include for-normal-layout {
+            grid-auto-flow: column;
+            padding-inline: 5%;
+            justify-items: normal;
+            gap: unset;
+            text-align: unset;
+        }
+
+        @include for-wide-layout {
+            padding-inline: 12%;
+        }
+    }
+
+    .deco-img {
+        position: absolute;
+        bottom: 0;
+        max-width: 200px;
+        grid-column: 1;
+
+        // @include for-normal-layout {
+        translate: 0 20px;
+        // }
+
+        @include for-wide-layout {
+            translate: unset;
+        }
+    }
+
+    .btn {
+        @include btn($type: darkish);
+
+        @include for-normal-layout {
+            justify-self: end;
+        }
+    }
+}

@@ -1,7 +1,7 @@
+import { CallToAction } from '../cmps/CallToAction'
 import { HighlightList } from '../cmps/HighlightList'
 import { TestimonyList } from '../cmps/TestimonyList'
 import decoImgBottom from '/images/bg-pattern-home-2.svg'
-import decoImgCA from '/images/bg-pattern-home-6-about-5.svg'
 
 export function HomePage() {
 
@@ -52,6 +52,7 @@ export function HomePage() {
 
     return (
         <div className="main-layout full home-page">
+
             <section className="main-layout full hero">
                 <div className="section-container">
                     <h2 className='title'>Find the <br></br>best <mark>talent</mark></h2>
@@ -67,13 +68,8 @@ export function HomePage() {
 
             <TestimonyList testimonies={testimonies} />
 
-            <section className='main-layout full call-to-action'>
-                <img src={decoImgCA} className='deco-img'></img>
-                <div className="section-container">
-                    <h4>Ready to get started?</h4>
-                    <button className='btn'>contact us</button>
-                </div>
-            </section>
+            <CallToAction title={'Ready to get started'} btnTxt={'contact us'} />
+
         </div>
     )
 }
