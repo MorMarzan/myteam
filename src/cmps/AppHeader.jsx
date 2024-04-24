@@ -34,8 +34,9 @@ export function AppHeader() {
             <header className={"main-layout full app-header " + headerScrolledClass}>
 
                 <div className={"backdrop " + mobileNavOpenClass} onClick={toggleMobileNav}></div>
-                <div className="section-container flex align-center">
-                    <img src={logo} alt="myteam logo" className="logo"></img>
+                <div className="section-container flex">
+                    {/* <img src={logo} alt="myteam logo" className="logo"></img> */}
+                    <h1 className="logo">myteam</h1>
                     <img src={hamburger} alt="hamburger" className="hamburger" onClick={toggleMobileNav}></img>
                     <nav className={"flex app-nav " + mobileNavOpenClass}>
                         <img src={closeIcon} alt="close" className="close" onClick={toggleMobileNav}></img>

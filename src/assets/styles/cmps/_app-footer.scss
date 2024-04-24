@@ -1,7 +1,88 @@
 .app-footer {
     background-color: $clrSecondary-2;
-    // color: $clr4;
-    // padding: 20px;
-    // margin: 10px;
-    // text-align: center;
+    padding-block: 48px;
+
+    .section-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        row-gap: 24px;
+
+        @include for-normal-layout {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 32px;
+            text-align: start;
+        }
+
+        @include for-wide-layout {
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+
+        &>* {
+            align-content: space-between;
+        }
+
+        .nav {
+            display: grid;
+
+            a:not(:last-of-type) {
+                padding-inline-end: 40px;
+            }
+        }
+
+        .social {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr;
+            justify-items: center;
+
+            @include for-normal-layout {
+                grid-template-columns: repeat(2, 1fr);
+                grid-column: 1 / -1;
+                justify-items: end;
+
+            }
+
+            @include for-wide-layout {
+                justify-items: end;
+                grid-column: unset;
+                grid-template-columns: unset;
+            }
+
+            .icons-container {
+                display: grid;
+                grid-auto-flow: column;
+                justify-self: center;
+                gap: em(16px, 15px);
+                align-items: center;
+
+                @include for-normal-layout {
+                    justify-self: start;
+                }
+
+                @include for-wide-layout {
+                    justify-self: end;
+                }
+
+                img {
+                    max-width: em(24px, 15px);
+                }
+            }
+
+        }
+
+        .opacFont {
+            opacity: 0.6;
+            text-align: center;
+
+            @include for-normal-layout {
+                text-align: end;
+            }
+
+            @include for-wide-layout {
+                text-align: start;
+            }
+        }
+    }
 }
