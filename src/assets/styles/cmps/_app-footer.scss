@@ -25,6 +25,7 @@
 
         .nav {
             display: grid;
+            row-gap: 24px;
 
             a:not(:last-of-type) {
                 padding-inline-end: 40px;
@@ -36,6 +37,7 @@
             width: 100%;
             grid-template-columns: 1fr;
             justify-items: center;
+            row-gap: 24px;
 
             @include for-normal-layout {
                 grid-template-columns: repeat(2, 1fr);
@@ -56,9 +58,11 @@
                 justify-self: center;
                 gap: em(16px, 15px);
                 align-items: center;
+                padding-block-start: 16px;
 
                 @include for-normal-layout {
                     justify-self: start;
+                    padding-block-start: unset;
                 }
 
                 @include for-wide-layout {
