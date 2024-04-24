@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { NavLink, useNavigate } from "react-router-dom"
 
-import logo from '/images/logo.svg'
 import hamburger from '/images/icon-hamburger.svg'
 import closeIcon from '/images/icon-close.svg'
 import deco from '/images/bg-pattern-about-1-mobile-nav-1.svg'
@@ -11,15 +10,24 @@ export function AppHeader() {
 
     const [isScrolled, setIsScrolled] = useState(false)
     const [isMobileNavOpen, seIsMobileNavOpen] = useState(false)
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 730)
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)
+        window.addEventListener('resize', handleResize)
 
-        return () => window.removeEventListener('scroll', handleScroll)
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+            window.removeEventListener('resize', handleResize)
+        }
     }, [])
 
     function handleScroll() {
         setIsScrolled(window.scrollY > 0)
+    }
+
+    function handleResize() {
+        setIsMobile(window.innerWidth < 730)
     }
 
     function toggleMobileNav() {
@@ -27,7 +35,7 @@ export function AppHeader() {
     }
 
     const headerScrolledClass = isScrolled ? 'scrolled' : ''
-    const mobileNavOpenClass = isMobileNavOpen ? 'open' : ''
+    const mobileNavOpenClass = isMobile && isMobileNavOpen ? 'open' : ''
 
     return (
         <>
@@ -35,7 +43,6 @@ export function AppHeader() {
 
                 <div className={"backdrop " + mobileNavOpenClass} onClick={toggleMobileNav}></div>
                 <div className="section-container flex">
-                    {/* <img src={logo} alt="myteam logo" className="logo"></img> */}
                     <h1 className="logo">myteam</h1>
                     <img src={hamburger} alt="hamburger" className="hamburger" onClick={toggleMobileNav}></img>
                     <nav className={"flex app-nav " + mobileNavOpenClass}>
